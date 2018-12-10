@@ -1,0 +1,141 @@
+.formWrapper{
+  margin: auto;
+}
+
+.todoButton{
+  border: none;
+  margin: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 1px 24px;
+  font-size: 1.3em;
+  font-family: 'Droid Sans', sans-serif;
+  background-color:grey;
+  color: #fff;
+  transition: 0.2s ease-out;
+}
+
+.todoButton:hover{
+  background-color: #bfbfbf;
+  color: #fff;
+  transition: 0.2s ease-out;
+}
+
+.todoInput{
+  width: 800px;
+  min-width: 800px;
+  font-size: 1.3em;
+  padding-left: 20px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-family: 'Droid Sans', sans-serif;
+  background-color:white;
+  color:black;
+  transition: 0.2s ease-out;
+}
+
+.todoInput:focus{
+  background-color:white;
+  color: #111;
+  transition: 0.2s ease-in;
+}
+
+.todo {
+  padding:10px 10px 25px 34px;
+  height: auto; 
+  margin: auto;
+  margin-bottom: 8px;
+  width: 60%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4em;
+  color: #222;
+  background-color:white; 
+  border-radius: 3px;
+  box-shadow: 43x 3px 2px #333;
+  opacity: 1;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+@keyframes fadeOut { from { opactiy:0.8; } to { opacity:0; } }
+
+.fade-in {
+    opacity:0;
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards;
+    animation-duration: 0.1s;
+}
+
+.todoContent{
+  float:left;
+  padding-right: 70px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.closebtn {
+    color: #AA9;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.closebtn:hover {
+    color: #AC2500;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height:100%;
+  background: antiquewhite;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.todosWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+.todosHeader {
+  display: flex;
+  flex: 1 1 5%;
+  min-height: 2.5em;
+  color: grey;
+  max-height: 2em;
+  font-size: 3.2em;
+  text-align: center;
+  align-content: center;
+  padding:20px 0px 20px 0px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.todosBody {
+  padding-top: 24px;
+  display: flex;
+  flex: 1 1 85%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.inputarea {
+  display: flex;
+  margin-bottom: 0px;
+  background-color:antiquewhite;
+}
