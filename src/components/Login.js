@@ -12,21 +12,17 @@ class Login extends Component {
 
     onLoginClick = (event) => {
         event.preventDefault();
-
         const { email, password } = this.state;
         firebaseAuth().signInWithEmailAndPassword(email, password)
             .then(() => {
                 // Redirect 
                 this.setState({ redirect: true });
-                
-
             })
             .catch(() => {
                 toast.error("Could not login. Check your email and password.", {
                     position: toast.POSITION.TOP_RIGHT
                 });
             });
-
     }
 
     handleChange = (event) => {
@@ -37,7 +33,6 @@ class Login extends Component {
         if (this.state.redirect) {
             return (<Redirect to='/todo' />);
         }
-
         return (
             <div className="container py-5">
                 <div className="row">

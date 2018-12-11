@@ -13,7 +13,7 @@ class Todolist extends Component {
     if (!firebase.apps.length) {
       firebase.initializeApp(DB_CONFIG);
     }
-   
+
     this.database = firebase.database().ref().child('todos');
 
     this.state = {
@@ -93,8 +93,7 @@ class Todolist extends Component {
 
       <div className="todosWrapper">
         <div className="todosHeader">
-
-          <div className="heading">Todolist</div>
+          <div className="heading">To-Do List</div>
         </div>
         <div className="inputarea">
           <div className="formWrapper">
@@ -120,9 +119,7 @@ class Todolist extends Component {
             })
           }
         </div>
-
       </div>
-
     );
   }
 }

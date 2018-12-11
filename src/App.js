@@ -29,8 +29,6 @@ class App extends Component {
     }
   }
 
-  
-
   componentDidMount() {
     firebaseAuth().onAuthStateChanged((user) => {
       console.log(this.state.user, "user");
@@ -43,7 +41,6 @@ class App extends Component {
     });
   }
 
-
   render() {
     return (
       <div className="App">
@@ -53,12 +50,9 @@ class App extends Component {
             <Switch>
             <Route path="/login" component={Login} />
             <Route path="/" component={Todolist} />
-
             </Switch>
           </div>
         </BrowserRouter>
-
-
       </div>
     );
   }
