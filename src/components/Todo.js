@@ -9,6 +9,7 @@ class Todo extends Component {
         this.handleRemoveTodo = this.handleRemoveTodo.bind(this);
     }
 
+    //method uses a removetodo and activates when button is pressed
     handleRemoveTodo(id) {
         this.props.removeTodo(id);
     }

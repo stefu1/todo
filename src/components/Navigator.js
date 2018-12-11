@@ -8,6 +8,8 @@ class Navigator extends Component {
     }
 
     render() {
+        //if user is authenticated, shows login
+        //otherwise logout
         let logLink = null;
         if (this.props.isAuthenticated)
             logLink = <button className="btn btn-link" onClick={()=>this.logout}>Logout</button>;

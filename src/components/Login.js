@@ -10,12 +10,13 @@ class Login extends Component {
         redirect: false
     };
 
+    // Takes the users credentials and verifies from 
+    //firebase authentication
     onLoginClick = (event) => {
         event.preventDefault();
         const { email, password } = this.state;
         firebaseAuth().signInWithEmailAndPassword(email, password)
             .then(() => {
-                // Redirect 
                 this.setState({ redirect: true });
             })
             .catch(() => {
@@ -25,6 +26,7 @@ class Login extends Component {
             });
     }
 
+    //handles the change in input field
     handleChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     }

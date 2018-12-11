@@ -6,6 +6,8 @@ import Todolist from './components/Todolist';
 import Navigator from './components/Navigator';
 import { firebaseAuth } from './config';
 
+//gets information if user is authenticated to open a page/component
+//if not, blocks and redirects to login page
 const PrivateRoute = ({ component: Component, isAuthenticated, ...rest }) => (
   <Route {...rest} render={props => (
     isAuthenticated ? (
@@ -29,6 +31,9 @@ class App extends Component {
     }
   }
 
+  //should get info if user is authenticated or not
+  //and change the state accordingly
+  //(not working properly)
   componentDidMount() {
     firebaseAuth().onAuthStateChanged((user) => {
       console.log(this.state.user, "user");
